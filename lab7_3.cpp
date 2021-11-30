@@ -1,8 +1,17 @@
 #include<iostream>
-
+#include<string>
+#include<cmath>
 using namespace std;
-
-
+int adiff(int X,int Y){
+int Z;
+Z = X - Y;
+Z = abs(Z);
+Z = Z%360;
+if(Z > 180){
+    Z = 360-Z;
+}
+return Z;
+}
 int main(){
   cout << adiff(180,270);
   cout << adiff(210,45);
